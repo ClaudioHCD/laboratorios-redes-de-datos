@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=3cm,top=4cm,bottom=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\author{Claudio Carrillo, Martin Morice, Raul Flores. \\ Profesor: Jaime Alvarez---ayudante: Alexis Inzunza}
+
+\title{Iinforme laboratorio 3}
+\begin{document}
+\begin{figure}[hbtp]
+\includegraphics[width=7cm]{../Escritorio/ad.png}
+\end{figure}
+
+\maketitle
+\part{instalacion de scapy y wireshark}
+Para instalar whireshark en ubuntu es necesario abrir el terminal e ingresar el sigiente comando:\\ sudo apt-get  install wireshark
+
+\includegraphics[width=13cm]{../Escritorio/wire.png} 
+
+luego para instalar scapy en una terminal se ingresa el siguiente comando \\ sudo atp-get install python-scapy
+
+\includegraphics[width=13cm]{../Escritorio/12.png} 
+\part{creando un frame}
+ procedemos a crear el frame
+ 
+ lo primero que hicimos fue asignar una variable a igualandola a la funcion ether(), para asi poder manipularla y poder darle nuestros propios valores, despues creamos otra variable de nombre b y le asignamos IP(), luego asignamos la variable c (que simula la capa de trasnporte) a el comando ICMP(),en segimiento asignamos a raw() la variable d, y agreagmos la direcion de destino y salida a la variable a, y por ultimo unimos el todas las variables al frame en si a traves de el siguiente comndo: \\ paquetito=a/b/c/d.
+   
+ 
+\includegraphics[width=13cm]{../Escritorio/ajd.png} 
+
+\part{enviado y recepcion}
+
+luego en ocupamos el comando sendp para enviar el frame.
+
+\includegraphics[width=13cm]{../Escritorio/pant.png} 
+
+aqui precentamos el envio del paquete
+
+\includegraphics[width=13cm]{../Escritorio/wireshare2.png} 
+
+y aqui la recepcion de un paquete 
+
+\includegraphics[width=13cm]{../Escritorio/wireshare1.png}
+\section{por medio del hub}
+al enviarse un frame por medio del hub este le manda una copia a todos los computadores conectados a el, y el que tenga la mac de destino o puede abrir en los demas les llega pero no los puedden leer.
+
+\section{por medio del switch}
+la principar diferencia del switch con el hub es que el switch no replica el mensaje a todos los servidores conectados, solo lo envia al servidor con la mac de destino.
+  
+\part{respuestas cuestionario}
+1- Se produce un envio broadcast que significa que la informacion de el paquete sera enviada a todos los canales de la red.
+
+2-Depende de si la red tiene como nucleo central un switch o un hub, si es un switch el paquete sera enviado directamente al pc que tenga la mac de destino, por que el switch tiene identificados los pc y sus respectivas ip y mac, por lo que envia directamente.
+
+Por otro lado si fuera un hub se utilizaria algo parecido a un broadcast, se enviaria a todos los pc hasta encontrar al que sea poseedor de la mac de destino.
+
+3-Si uno envia algo a una mac inexistente en el sistema, el frame se envia igual sin poder llegar a el destino estimado.
+
+Cualquier persona facilmente crear una mascara con la mac de destino del frame anterior y asi interceptar dicho frame.
+  
+
+\end{document}
