@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=3cm,top=4cm,bottom=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\author{Claudio Carrillo, Martin Morice, Raul Flores. \\ Profesor: Jaime Alvarez---ayudante: Alexis Inzunza}
+
+\title{Iinforme laboratorio 1}
+\begin{document}
+\begin{figure}[hbtp]
+\includegraphics[scale=1]{../Escritorio/ad.png}
+\end{figure}
+
+\maketitle
+\section{Actividad 1}
+\begin{multicols}{2}
+\subsection{Equipos conectados a la red}
+Dentro del laboratorio de telematica se encontraron los siguientes equipos:
+\subsubsection{HP con sistema operativo Ubuntu}
+\subsubsection{Switches}
+\subsubsection{Patch Panels}
+\subsubsection{Servidores}
+\subsubsection{cables de par trenzado}
+
+\subsection{Los Switch de la red}
+Nos encontramos con un total de 3 switchs, dos de ellos marca 3COM con 24 entradas para cables ethernet. Ademas nos encontramos con uno de marca catalyst que al igual que los oros dos tenia 24 entradas para cables ethernet.
+
+El switch sirve para solucionar problemas de ancho de banda pequeños o aumenter la velocidad de la entrega de paquetes.
+
+\subsection{Hardware de la red}
+Es el conjunto de materiles fisicos que forman a un computador o un sistema informatico.
+
+Dentro de la red habian los siguientes dispositivos:
+\subsubsection{2 switch marca 3COM}
+\subsubsection{1 sitch marca catalyst}
+\subsubsection{2 patch panel marca MFICO modelo enhanted C5}
+\subsubsection{multiples cables de tipo par trenzado categoria 5e}
+\subsubsection{11 computadores HP}
+
+\subsection{Cable de red utilizado}
+Estos son los cables utilizados para conectar a el dispositivo receptor con el dispositivo proveedor de red.
+
+El tipo de cable utilizado es de par trenzado UTP (sin proteccion contra ruido) , categoria 5e, es decir tiene un ancho de banda de 100 mb/s.
+\subsection{Patch panel de la red}
+En la red se utilizo un patch panel marca MFICO---enhanted C5 con al rededor de 42 entradas de ethernet.
+
+El patch panel se utiliza para recibir a todos los cables de red y luego conectar entre si a todos los computadores de la red.
+
+\section{Actividad 2}
+\subsection{IP de la red}
+Una dirección IP es un número que identifica la Interfaz de un dispositivo (en este caso un pc) que utilice el protocolo IP, que corresponde al nivel de red del modelo TCP/IP.
+La IP encontrada por nosotros fue 192.168.1.112.
+\subsection{Direccion MAC de la red}
+Corresponde a la identificacion unica de la tarjeta de red siendo un identificador de 48 bits, de los cuales los primeros 24 bits estan determinados por IEEE,  y los 24 bits restantes por el fabricante de el dispositivo de red.
+
+\section{Actividad 3}
+\subsection{Diagrama de la red}
+\includegraphics[width=7cm]{../Descargas/Untitled_Diagram.png} 
+\section{Conclusion}
+En el laboratorio de telematica de nuestra universidad, identificamos los diferentes dispositivos fisicos que componen una red lan. Desde la fuente de internet salen cables ethernet que llegan hasta el switch, luego de eso nuevos cables se distribuyen a el patch panel que es el que termina por repartir a traves de mas cables el internet a los diferentes computadores que componen la red.
+
+Ante esto ya nos hemos familiarizado con el hardware de una red lan, sintiendonos mas preparados para enfrentar los siguientes desafios culminando en el desarrollo de nuestra propia red lan.
+
+
+\end{multicols}
+\section{bibliografia}
+
+\url{https://es.wikipedia.org/wiki/Direcci%C3%B3n_MAC}
+
+\url{https://es.wikipedia.org/wiki/Direcci%C3%B3n_IP}
+
+\url{http://www.aprendaredes.com/dev/articulos/que-es-el-switch.htm}
+
+\url{http://www.ordenadores-y-portatiles.com/patch-panel.html}
+
+
+
+
+
+ 
+\end{document}
