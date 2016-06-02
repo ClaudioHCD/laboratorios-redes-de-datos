@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=3cm,top=4cm,bottom=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\author{Claudio Carrillo, Martin Morice, Raul Flores. \\ Profesor: Jaime Alvarez---ayudante: Alexis Inzunza}
+
+\title{Iinforme laboratorio 4}
+\begin{document}
+\begin{figure}[hbtp]
+\includegraphics[scale=1]{../Escritorio/ad.png}
+\end{figure}
+
+\maketitle
+\part{actividad I, II y III}
+	para empezar el laboratorio necesitaremos crear una topologia con enlaces rebundantes como la que precentaremso a continuacion:
+	
+\includegraphics[width=13cm]{../Escritorio/1.png} 
+	
+	e incluimos los comandos para definir un switch como primario y otro como secundario 
+	
+\includegraphics[width=13cm]{../Escritorio/2.png} 	
+
+	lugo de ello configuramos la prioridad de los switch 
+	
+\includegraphics[width=13cm]{../Escritorio/3.png} 
+
+\includegraphics[width=13cm]{../Escritorio/4.png} 
+  
+\section{respuesta a preguntas}
+
+1.	el camino que toma el paquete para llegar desde el switch0 al switch2 es: de switch0 al switch1, y del switch1 al switch2 esto devido a la prioridad de dichos switchs sin importar cual es el camino mas corto entre ellos.
+
+2.	el camino que toma el paquete para llegar desde el switch2 al switch1 es exactamente el expuesto en el enunciado de la pregunta ya que al no haber nada entre dichos switch solo y estar habilitada su conexionel paquete toma el dicho camino.
+
+3.	el camino que toma el paquete para llegar desde el switch2 al switch0 es: de switch2 al switch1, y del switch1 al switch0.
+
+4.	el camino es la uno solo la conexion del switch1 al switch0.
+
+\part{actividad IV}
+	para esta actividad utilizaremos una topologia distinta, la cual expondremos a continacion:
+	
+\includegraphics[width=13cm]{../Escritorio/6.png}  
+
+	y procederemos a configuarar los puertos de los swich
+	
+\includegraphics[width=13cm]{../Escritorio/7.png} 
+
+\includegraphics[width=13cm]{../Escritorio/8.png} 
+
+\includegraphics[width=13cm]{../Escritorio/9.png} 
+
+\section{respuesta preguntas}
+
+1.	La principal utilidad que se les da al tipo access de puertos es para conectar equipos finales, los puertos de acceso solo  transportan tráfico de una sola vlan y aunque los puertos de acceso también se pueden utilizar para conectar switches no es recomendable ya que una implementación de este tipo no es escalable, por lo que tipo de puertos trunk es para realizar la conexión entre switches, un puerto trunk puede transportar trafico de múltiples vlans, por lo que, podemos tener múltiples vlans en los switches y solo un enlace para transportar todo el tráfico.
+
+2.	El pc pierde toda comunicacion de las vlan
+
+3.	El switch conectado en modo access tendra acceso a una sola vlan y el switch conectado en modo trunk puede tener acceso a todas las vlan.
+
+4.	Desde el switch 1 va directo al switch 0 segun la topologia dada.
+
+\section{conclusion}	
+	Finalmente hemos aprendido a configurar un switch para, a traves de dos protocolos, mejorar la calidad de una red.
+
+Aprendimos a configurar el protocolo STP, que sirve para tener dentro de nuestra red, enlaces redundantes, sin problemas, obteniendo una red con mayor disponibilidad.
+
+Y para terminar, configuramos el protocolo VLAN, que nos permite dividir nuestra red a voluntad, dando mas seguridad y flexibilidad a nuestra red LAN. 
+  
+
+\end{document}
