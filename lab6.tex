@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=3cm,top=4cm,bottom=3cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\author{Claudio Carrillo, Martin Morice, Raul Flores. \\ Profesor: Jaime Alvarez---ayudante: Alexis Inzunza}
+
+\title{Iinforme laboratorio 6}
+\begin{document}
+\begin{figure}[hbtp]
+\includegraphics[scale=1]{../Escritorio/ad.png}
+\end{figure}
+
+\maketitle
+\part{ruteo estatico}
+	Para esta actividad se pide hacer un ruteo estatico con 4 routers, con la siguiente topologia
+	
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/1.jpg} 
+	
+	Primero se deben configurar las ip de las interfaces del router (FastEthernet y serial). Lo que podemos hacer por consola o gráficamente. Primero configuraremos el FastEthernet:
+	
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/routerconsola.jpg} 	
+
+	para ethrnet elegimos
+	
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/routergrafico.jpg}  
+
+192.168.0.0 /24 como IP. Y para serial elegimos la IP 10.0.0.0 /30
+
+Luego configuramos los puertos serial:
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/serialgrafico.jpg} 
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/serialconsola.jpg} 
+  
+Al terminar de configurar IP’s procedemos a hacer el ruteo de nuestra red. Para esto determinamos rápidamente cual podría ser la mejor ruta de una sub red a otra, por medio de saltos, y asi elegimos una ruta. Luego configuramos en cada uno de los routers, gráficamente o por consola, si se usa la consola el comando es ip route “network” “mask” “next loop”.
+
+Primero configuramos la ruta a las subredes ethernet (IP:192.168.0.0/24)
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/Serial192.jpg} 
+  
+Y para finalizar ruteamos la red con IP 10.0.0.0/24.
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/Serial100.jpg}
+
+Al finalizar la configuración de IP’s y Rutas, probamos la red mandando un mensaje del PC0 al PC4. Primero enviamos el mensaje sin hacer el ruteo y luego con el ruteo implementado.
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_estatico/Screenshot_1.jpg}
+
+\part{ruteo dinamico}
+
+Siguiendo las instruciones del lab configurumos el sistema de ruteo dinamico
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_dinamico/imaenes/1.png}
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_dinamico/imaenes/2.png} 
+
+\includegraphics[width=13cm]{../Escritorio/ruteo_dinamico/imaenes/3.png} 
+   
+\includegraphics[width=13cm]{../Escritorio/ruteo_dinamico/imaenes/4.png} 
+\end{document}
